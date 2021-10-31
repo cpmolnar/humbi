@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            //"program": "models\\LIP_JPPNet\\evaluate_pose_JPPNet-s2.py",
+            "program": "models\\SelectionGAN\\person_transfer\\test.py",
+            "args": ["--dataroot", "datasets", "--name", "hmubi_selectiongan", "--model", "PATN", "--dataset_mode", "hmubi", "--n_layers", "3", "--norm", "instance", "--batchSize", "4", "--resize_or_crop", "no", "--gpu_ids", "0", "--BP_input_nc", "18", "--no_flip", "--which_model_netG", "PATN", "--checkpoints_dir", "./checkpoints", "--pairLst", "datasets\\pairs-test.txt", "--n_layers_D", "3", "--with_D_PP", "1", "--with_D_PB", "1",  "--display_id", "1", "--gpu_ids", "0"],
+            //"program": "models\\SelectionGAN\\person_transfer\\train.py",
+            //"args": ["--dataroot", "datasets", "--name", "hmubi_selectiongan", "--model", "PATN", "--lambda_GAN", "5", "--lambda_A", "10", "--lambda_B", "10", "--dataset_mode", "hmubi", "--n_layers", "3", "--norm", "instance", "--batchSize", "4", "--pool_size", "0", "--resize_or_crop", "no", "--gpu_ids", "0", "--BP_input_nc", "18", "--no_flip", "--which_model_netG", "PATN", "--niter", "500", "--niter_decay", "200", "--checkpoints_dir", "./checkpoints", "--pairLst", "datasets\\pairs-train.txt", "--L1_type", "l1_plus_perL1", "--n_layers_D", "3", "--with_D_PP", "1", "--with_D_PB", "1",  "--display_id", "1", "--gpu_ids", "0"],
+            //"program": "models\\Global-Flow-Local-Attention\\train.py",
+            //"args": ["--name", "hmubi", "--model", "poseflownet", "--attn_layer", "2,3", "--kernel_size", "2=5,3=3", "--gpu_id", "0", "--dataset_mode", "hmubi", "--dataroot", "datasets"],
+            "console": "integratedTerminal"
+        }
+    ]
+}
